@@ -13,6 +13,7 @@ class Activity(models.Model):
     main_club = models.ForeignKey(Club, verbose_name="主办社团")
     cooperated_club = models.ForeignKey(Club, verbose_name="协办社团")
 
+    name = models.CharField(verbose_name="活动名称")
     date = models.DateTimeField(verbose_name="活动时间")
     activity_type = models.CharField(choices=types, verbose_name="活动类型")
     activity_people_count = models.IntegerField(verbose_name="活动参与人数")
