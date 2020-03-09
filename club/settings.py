@@ -37,9 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     'club',
     'management',
 
+=======
+>>>>>>> 9c174d7... Create-Project
 ]
 
 MIDDLEWARE = [
@@ -75,6 +78,7 @@ WSGI_APPLICATION = 'club.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
+<<<<<<< HEAD
 MYSQL_USER = os.environ.get('MYSQL_USER', 'root')
 MYSQL_PASSWORD = os.environ.get('MYSQL_PASSWORD', '')
 MYSQL_HOST = os.environ.get("MYSQL_HOST", 'localhost')
@@ -91,6 +95,13 @@ DATABASES = {
         'HOST': MYSQL_HOST,
         'PORT': MYSQL_PORT,
         'TEST': {"NAME": "test_mysql"}
+=======
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+>>>>>>> 9c174d7... Create-Project
     }
 }
 
