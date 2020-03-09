@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import pymysql
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -98,10 +99,22 @@ DATABASES = {
 =======
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
     'default': {
+<<<<<<< HEAD
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 >>>>>>> 9c174d7... Create-Project
+=======
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'club',
+        'USER': 'root',
+        'HOST': 'localhost',
+        'PORT': '3306',
+>>>>>>> b92972c... Add .gitignore file and installed mysqlclient
     }
 }
 
