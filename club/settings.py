@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-import pymysql
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -80,12 +79,16 @@ WSGI_APPLICATION = 'club.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> b83d7a8... completed mysql config
 MYSQL_USER = os.environ.get('MYSQL_USER', 'root')
 MYSQL_PASSWORD = os.environ.get('MYSQL_PASSWORD', '')
 MYSQL_HOST = os.environ.get("MYSQL_HOST", 'localhost')
 MYSQL_PORT = os.environ.get('MYSQL_PORT', '3306')
 MYSQL_NAME = os.environ.get('MYSQL_NAME', 'club')
 
+<<<<<<< HEAD
 
 DATABASES = {
     'default': {
@@ -97,12 +100,10 @@ DATABASES = {
         'PORT': MYSQL_PORT,
         'TEST': {"NAME": "test_mysql"}
 =======
+=======
+>>>>>>> b83d7a8... completed mysql config
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    # }
     'default': {
 <<<<<<< HEAD
         'ENGINE': 'django.db.backends.sqlite3',
@@ -110,11 +111,20 @@ DATABASES = {
 >>>>>>> 9c174d7... Create-Project
 =======
         'ENGINE': 'django.db.backends.mysql',
+<<<<<<< HEAD
         'NAME': 'club',
         'USER': 'root',
         'HOST': 'localhost',
         'PORT': '3306',
 >>>>>>> b92972c... Add .gitignore file and installed mysqlclient
+=======
+        'NAME': MYSQL_NAME,
+        'USER': MYSQL_USER,
+        'PASSWORD': MYSQL_PASSWORD,
+        'HOST': MYSQL_HOST,
+        'PORT': MYSQL_PORT,
+        'TEST': {"NAME": "test_mysql"}
+>>>>>>> b83d7a8... completed mysql config
     }
 }
 
